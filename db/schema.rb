@@ -13,13 +13,13 @@
 ActiveRecord::Schema.define(version: 2020_10_03_052847) do
 
   create_table "users", force: :cascade do |t|
-    t.string "email"
-    t.string "crypted_password"
-    t.string "password_salt"
-    t.string "persistence_token"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+  t.string "email"
+  t.string "crypted_password"
+  t.string "password_salt"
+  t.string "persistence_token"
+  t.datetime "created_at", precision: 6, null: false
+  t.datetime "updated_at", precision: 6, null: false
+  t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
