@@ -10,16 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_03_052847) do
+ActiveRecord::Schema.define(version: 2020_10_03_190332) do
 
   create_table "users", force: :cascade do |t|
-  t.string "email"
-  t.string "crypted_password"
-  t.string "password_salt"
-  t.string "persistence_token"
-  t.datetime "created_at", precision: 6, null: false
-  t.datetime "updated_at", precision: 6, null: false
-  t.index ["email"], name: "index_users_on_email", unique: true
+    t.string "email"
+    t.string "crypted_password"
+    t.string "password_salt"
+    t.string "persistence_token"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "login_count", default: 0, null: false
+    t.integer "failed_login_count", default: 0, null: false
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string "current_login_ip"
+    t.string "last_login_ip"
+    t.string "perishable_token"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
