@@ -12,12 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2020_10_06_023849) do
 
-  create_table "etl_metas", force: :cascade do |t|
+  create_table "etl_meta", force: :cascade do |t|
     t.datetime "last_runtime"
     t.integer "etl_version"
     t.string "etlrecord_type"
     t.integer "etlrecord_id"
-    t.index ["etlrecord_type", "etlrecord_id"], name: "index_etl_metas_on_etlrecord_type_and_etlrecord_id"
+    t.index ["etlrecord_type", "etlrecord_id"], name: "index_etl_meta_on_etlrecord_type_and_etlrecord_id"
   end
 
   create_table "plants", force: :cascade do |t|

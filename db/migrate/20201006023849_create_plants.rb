@@ -10,12 +10,20 @@ class CreatePlants < ActiveRecord::Migration[6.0]
       t.integer :spread
       t.string :minimum_root_depth
       t.decimal :prefered_sand_vs_clay_silt
-      t.integer :prefered_nutrients
+      t.decimal :prefered_nutrients
       t.string :prefered_soil_humidity
-      t.string :nitrogen_filtration
+      t.boolean :nitrogen_fixation
       t.string :average_hight
       t.decimal :minimum_tempurature
       t.decimal :maximum_temperature
+      t.string :slug
+      t.string :common_name
+      t.string :image_url
+      t.integer :fruit_months, null: false, default: 0
+      t.integer :growth_months, null: false, default: 0
+      t.decimal :maximum_precipitation
+      t.decimal :minimum_precipitation
+      t.decimal :maximum_soil_salinity
     end
   end
 end

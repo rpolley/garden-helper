@@ -21,6 +21,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'authlogic', '~> 6.2'
 # styles
 gem 'bootstrap-sass'
+# for web scraping jobs
+gem 'rest-client'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
