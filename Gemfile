@@ -23,6 +23,8 @@ gem 'authlogic', '~> 6.2'
 gem 'bootstrap-sass'
 # for web scraping jobs
 gem 'rest-client'
+# cronjobs
+gem 'whenever', require: false
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
