@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 gem 'rest-client'
 # cronjobs
 gem 'whenever', require: false
+# database flags
+gem 'active_flag'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

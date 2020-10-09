@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 2020_10_06_023849) do
   create_table "etl_meta", force: :cascade do |t|
     t.datetime "last_runtime"
     t.integer "etl_version"
-    t.string "etlrecord_type"
-    t.integer "etlrecord_id"
-    t.index ["etlrecord_type", "etlrecord_id"], name: "index_etl_meta_on_etlrecord_type_and_etlrecord_id"
+    t.string "etl_record_type"
+    t.integer "etl_record_id"
+    t.index ["etl_record_type", "etl_record_id"], name: "index_etl_meta_on_etl_record_type_and_etl_record_id"
   end
 
   create_table "plants", force: :cascade do |t|
@@ -30,12 +30,20 @@ ActiveRecord::Schema.define(version: 2020_10_06_023849) do
     t.integer "spread"
     t.string "minimum_root_depth"
     t.decimal "prefered_sand_vs_clay_silt"
-    t.integer "prefered_nutrients"
+    t.decimal "prefered_nutrients"
     t.string "prefered_soil_humidity"
-    t.string "nitrogen_filtration"
-    t.string "average_hight"
+    t.boolean "nitrogen_fixation"
+    t.string "average_height"
     t.decimal "minimum_tempurature"
     t.decimal "maximum_temperature"
+    t.string "slug"
+    t.string "common_name"
+    t.string "image_url"
+    t.integer "fruit_months", default: 0, null: false
+    t.integer "growth_months", default: 0, null: false
+    t.decimal "maximum_precipitation"
+    t.decimal "minimum_precipitation"
+    t.decimal "maximum_soil_salinity"
   end
 
   create_table "users", force: :cascade do |t|
