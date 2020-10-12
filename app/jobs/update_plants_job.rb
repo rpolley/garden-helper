@@ -83,7 +83,7 @@ class UpdatePlantsJob < ApplicationJob
     to.maximum_precipitation = growth['maximum_precipitation']['mm'] unless growth['maximum_precipitation'].nil?
     to.minimum_precipitation = growth['minimum_precipitation']['mm'] unless growth['minimum_precipitation'].nil?
     to.maximum_temperature = growth['maximum_temperature']['deg_c'] unless growth['maximum_temperature'].nil?
-    to.minimum_temperature = growth['minimum_tempurature']['deg_c'] unless growth['minimum_tempurature'].nil?
+    to.minimum_temperature = growth['minimum_temperature']['deg_c'] unless growth['minimum_temperature'].nil?
     to.prefered_soil_nutrients = growth['soil_nutrients']/10.0 unless growth['soil_nutrients'].nil?
     to.prefered_sand_vs_clay_silt = growth['soil_texture']/10.0 unless growth['soil_texture'].nil?
     to.maximum_soil_salinity = growth['soil_salinity']/10.0 unless growth['soil_salinity'].nil?

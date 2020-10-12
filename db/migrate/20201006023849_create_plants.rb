@@ -14,7 +14,7 @@ class CreatePlants < ActiveRecord::Migration[6.0]
       t.string :prefered_soil_humidity
       t.boolean :nitrogen_fixation
       t.string :average_height
-      t.decimal :minimum_tempurature
+      t.decimal :minimum_temperature
       t.decimal :maximum_temperature
       t.string :slug
       t.string :common_name

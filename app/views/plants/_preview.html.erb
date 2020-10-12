@@ -1,0 +1,9 @@
+
+<%# render a plant as a card to be included in another page %>
+<div class="card" style="width: 18rem">
+  <%= image_tag plant.image_url || "plant_not_found.png", size:"180x180", class: "Card" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= plant.common_name %></h5>
+    <%= link_to 'Details', plants_path(plant), class: 'btn btn-primary' %>
+  </div>
+</div>
